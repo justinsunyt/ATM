@@ -1,7 +1,13 @@
+import java.util.HashMap;
 
 public class ATM {
-	static void deposit(String id, double amount) {
-		System.out.println(id);
-		System.out.println(amount);
+	HashMap<String, Double> accounts = new HashMap<String, Double>();
+	
+	public void deposit(String id, double amount) {
+		if (this.accounts.get(id) == null) {
+			this.accounts.put(id, amount);
+		} else {
+			this.accounts.put(id, this.accounts.get(id) + amount);
+		}
 	}
 }
