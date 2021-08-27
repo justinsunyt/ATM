@@ -1,12 +1,7 @@
 
 public class ATM {
-
-	public static void main(String[] args) {
-		
-
-	}
-	
-	static void deposit() {
-		
+	static void deposit(String id, double amount) {
+		System.out.println(id);
+		System.out.println(amount);
 	}
 }
